@@ -1,5 +1,5 @@
 public class Main {
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) throws InterruptedException, LimitException {
         BankAccount account = new BankAccount(15000);
 
         try {
@@ -12,13 +12,12 @@ public class Main {
             System.out.println("выполняется снятие всех денег");
             Thread.sleep(1000);
             System.out.println("Loading.");
-            Thread.sleep(1000);
+            Thread.sleep(200);
             System.out.println("Loading..");
-            Thread.sleep(1000);
+            Thread.sleep(200);
             System.out.println("Loading...");
-            Thread.sleep(1000);
-            System.out.println("Успех, ваш баланс снят, текущий баланс: " + (e.getRemainingAmount()  -  e.getRemainingAmount()));
-
+            Thread.sleep(200);
+            account.withdraw(e.getRemainingAmount());
         }
     }
 }
